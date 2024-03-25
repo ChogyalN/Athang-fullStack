@@ -1,19 +1,21 @@
 package libraryManagementSys;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Library implements LibraryInterface{
     Book book;
     List<Book> allBooks = new ArrayList<>();
+    Set<Book> booksSet = new HashSet<>();
     @Override
-    public List<Book> addBooks(Book book) {
-        allBooks.add(book);
-        return allBooks;
+    public Set<Book> addBooks(Book book) {
+      return null;
     }
 
     @Override
-    public List<Book> issuedBooks(Member member) {
+    public List<Book> issueBooks(Member member, Book book) {
         List<Book> issudBooksForPartclrMem = new ArrayList<>();
         for(Book b : allBooks){
             if(b.getMemberId() == member.getId()){
