@@ -17,12 +17,12 @@ public class FileInputOutput {
     }
 
     private void deleteFile() {
-        File myFile = new File("my-file.txt");
+        File myFile = new File("01-athang-fileIO.txt");
         myFile.delete();
     }
 
     private void readFromFile() {
-        File myFile = new File("my-file.txt");
+        File myFile = new File("01-athang-fileIO.txt");
         try {
             FileReader fileReader = new FileReader(myFile);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -38,7 +38,7 @@ public class FileInputOutput {
     }
 
     private void updateFile() {
-        File myFile = new File("my-file.txt");
+        File myFile = new File("01-athang-fileIO.txt");
         FileWriter fileWriter=null;
         try {
             fileWriter = new FileWriter(myFile, true);
@@ -55,11 +55,13 @@ public class FileInputOutput {
     }
 
     private void writeIntoFile() {
-        File myFile = new File("my-file.txt");
+        File myFile = new File("01-athang-fileIO.txt");
         FileWriter fileWriter=null;
         try {
             fileWriter = new FileWriter(myFile);
-            fileWriter.write("This is the first sentence written in the file. \n");
+            fileWriter.write("Chogyal \n");
+            fileWriter.write("Changzamtok \n");
+            fileWriter.write("17398529 \n");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }finally {
@@ -72,12 +74,12 @@ public class FileInputOutput {
     }
 
     private void createFile() {
-        File myFile = new File("my-file.txt");
+        File myFile = new File("01-athang-fileIO.txt");
         try {
             if(myFile.createNewFile()){
                 System.out.println("File is created!!");
             }else{
-                System.out.println("The file is already created");
+                System.out.println("File IO java - Athang");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
